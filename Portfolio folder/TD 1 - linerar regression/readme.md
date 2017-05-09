@@ -68,7 +68,12 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 ``` r
 #here we build a data model lm -- linear model
 reslm <- lm(Y~X1+ X2 + X3 + X4 + X5 + X6 + X7 + X8 + X9 + X10 ,caterpillar)
+library(car)
+round(vif(reslm),2)
 ```
+
+    ##    X1    X2    X3    X4    X5    X6    X7    X8    X9   X10 
+    ##  1.93  1.16 42.81 16.32  9.65 61.49  1.69 13.15  9.59  1.67
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.
 
